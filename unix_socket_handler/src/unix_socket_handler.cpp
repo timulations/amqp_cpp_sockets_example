@@ -89,10 +89,6 @@ struct UnixSocketConnectionHandler::Impl {
     }
 
     void loop() {
-
-        std::vector<char> buffer;
-        buffer.reserve(66536); 
-
         while (true) {
             fd_set readfds;
             FD_ZERO(&readfds);
